@@ -1,25 +1,69 @@
-# 🛸 UFO Data Analysis
 
-This project explores UFO sightings data to identify trends, patterns, and anomalies in time, location, and descriptions.
+---
 
-## 📊 Key Features
-- Cleaned and explored raw UFO sightings dataset.
-- Performed visualizations of sightings by country, year, and shape.
-- Conducted text analysis on description fields for insight into public perception.
+## 📊 Exploratory Data Analysis
 
-## 🛠️ Tools Used
-- Python, Pandas, Matplotlib, Seaborn
-- Jupyter Notebook
+- Cleaned and standardized city, state, country, and time fields.
+- Explored frequency of shapes, durations, and reporting trends.
+- Chi-square test & Cramér’s V used to assess shape correlations by location.
 
-## 📁 Files
-- `analysis.ipynb` – Full exploratory notebook.
-- `data/` – (Optional) Folder to include dataset or a script to download it.
+---
 
-## 🚀 Getting Started
-Clone the repo and open `analysis.ipynb` in Jupyter or VSCode to run locally.
+## 🗺️ Geospatial Analysis
 
-## 📌 Example Output
-(Add charts later to show visuals—optional but very impactful)
+Using GeoPandas, sightings were plotted on a global basemap to explore density by region.
+
+![UFO World Map](images/ufo_map.png)
+
+---
+
+## 🕒 Temporal Trends
+
+Analyzed yearly, monthly, weekday, and hourly sighting patterns.
+
+- Most sightings occur in **summer**, especially **July**.
+- Reports spike between **8 PM and midnight**.
+- Sightings peaked around **1997–2003**.
+
+![Sightings Per Year](images/sightings_yearly.png)
+
+---
+
+## 💬 Natural Language Processing (NLP)
+
+Applied text cleaning, sentiment analysis, and word cloud generation on over 80,000 sighting descriptions.
+
+- Majority of reports are **neutral or mildly positive**.
+- Language tends to be **objective**, focusing on observation.
+- Word cloud of most common terms below:
+
+![UFO Word Cloud](images/wordcloud_ufo.png)
+
+---
+
+## 📌 Tools Used
+
+- Python (Pandas, NumPy, Matplotlib, Seaborn, GeoPandas)
+- NLP: `TextBlob`, `wordcloud`, `nltk`
+- Geospatial: `geopandas`, `shapely`, `geodatasets`
+- Jupyter Notebooks
+
+---
+
+## 🚀 Possible Future Work
+
+- Topic modeling on sighting descriptions
+- Time-series forecasting or anomaly detection
+- Interactive dashboard (e.g., with Plotly Dash or Streamlit)
+
+---
 
 ## 📄 License
+
 MIT
+
+---
+
+## 🤝 Acknowledgments
+
+Data from [NUFORC](https://www.kaggle.com/datasets/NUFORC/ufo-sightings) via Kaggle.
