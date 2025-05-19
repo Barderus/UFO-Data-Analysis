@@ -1,5 +1,17 @@
 # Ignore IDE and OS files
-.idea/
-__pycache__/
 .DS_Store
 .ipynb_checkpoints/
+# Ignore virtual environment
+.venv/
+
+# Ignore PyCharm and VSCode project files
+.idea/
+.vscode/
+
+# Ignore compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore logs and environment dumps
+*.log
+.env
